@@ -1,6 +1,8 @@
 ;(() => {
     "use strict";
 
+    let expression = "";
+
     const methods = {
         '+': ((a, b) => a + b),
         '-': ((a, b) => a - b),
@@ -19,4 +21,26 @@
         }
         return methods[operator](leftOperand, rightOperand);
     }
+
+    /* Event handlers */
+
+    const display = document.querySelector(".display");
+
+    const btnContainer = document.querySelector(".btn-container");
+    btnContainer.addEventListener("click", (event) => {
+        const target = event.target;
+        if (target.tagName !== "BUTTON") return;
+
+        switch (target.className) {
+            case "clear":
+                display.textContent = "";
+                expression = display.textContent;
+                break;
+            default:
+                display.textContent += target.textContent;
+                expression = display.textContent;
+                break;
+        }
+    });
+
 })();
