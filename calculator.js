@@ -39,7 +39,7 @@
         const target = event.target;
         if (target.tagName !== "BUTTON") return;
 
-        if (display.textContent === "Can't divide 0") display.textContent = "";
+        if (display.textContent === "Can't divide by 0") display.textContent = "";
 
         switch (target.className) {
             case "clear":
@@ -62,7 +62,7 @@
                 }
 
                 if (!isFinite(calculatedExpression)) {
-                    display.textContent = "Can't divide 0";
+                    display.textContent = "Can't divide by 0";
                     expression = "";
                     return operatorExists = false;
                 }
@@ -75,7 +75,7 @@
                 if (calculated === null) return;
 
                 if (!isFinite(calculated)) {
-                    display.textContent = "Can't divide 0";
+                    display.textContent = "Can't divide by 0";
                     expression = "";
                     return operatorExists = false;
                 }
