@@ -1,4 +1,74 @@
 * {
+    font-family: monospace;
     padding: 0;
     margin: 0;
+}
+
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    background-color: #121212;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #282828;
+    border: 6px solid #3f3f3f;
+    border-radius: 4px;
+
+    height: 512px;
+    width: 388px;
+}
+
+.display {
+    flex: 1 0 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    background-color: #8b8b8b;
+    color: #000000;
+
+    margin: 2px;
+    font-size: 6em;
+}
+
+.btn-container {
+    flex: 7 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn-container > button {
+    height: 78px;
+    width: 92px;
+
+    border: 0;
+    border-radius: 4px;
+
+    background-color: #bfbfbf;
+
+    font-size: 2.5em;
+}
+
+.btn-container > button.operator,
+.btn-container > button.equals {
+    background-color: #f4a460;
+}
+
+.btn-container > button.backspace,
+.btn-container > button.sign,
+.btn-container > button.percent {
+    background-color: #58a9ff;
+}
+
+.btn-container > button.clear {
+    background-color: #793636;
 }
