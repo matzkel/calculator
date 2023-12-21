@@ -56,6 +56,8 @@
     background-color: #bfbfbf;
 
     font-size: 2.5em;
+
+    transition: background-color, .2s;
 }
 
 .btn-container > button.operator,
@@ -71,4 +73,9 @@
 
 .btn-container > button.clear {
     background-color: #793636;
+}
+
+.btn-container > button:hover,
+.current-operator {
+    filter: contrast(160%);
 }
