@@ -63,7 +63,7 @@
     if (target.tagName !== "BUTTON") return;
 
     const MAX_LENGTH = 8;
-    switch (target.className) {
+    switch (target.className.split(" ")[0]) {
       case "clear":
         clearExpression(expression);
         break;
